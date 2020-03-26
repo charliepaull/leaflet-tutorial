@@ -5,6 +5,9 @@ let myMap = L.map("mapid").setView([51.505, -0.09], 13)
 
 // Note: setView also returns a map object - most Leaflet methods act like this when an explicit value is NOT returned
 
+// access key but hidden in config.js for GitHub
+let mykey = config.mapboxKey
+
 // Add a tile layer to add to our map
 // Using a Mapbox tile layer here
 // have an access token as well
@@ -15,5 +18,5 @@ L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_toke
     id: 'mapbox/streets-v11',
     tileSize: 512,
     zoomOffset: -1,
-    accessToken: 'pk.eyJ1IjoiY2hhcmxpZXBhdWxsMjExIiwiYSI6ImNrODliY3NsejA1OGwza3BtbmV1dTZ1ZXMifQ.irXZ5CNwNM9EQ_YUcpJszg'
+    accessToken: mykey
 }).addTo(mymap);
